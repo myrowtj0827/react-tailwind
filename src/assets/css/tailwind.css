@@ -1,0 +1,17 @@
+
+:root {
+    --main-bg: #FFFBF7;
+    --main-color: #EF9071;
+    --chat-color: #C7C8CA;
+    --grid1-color: #706966;
+    --grid2-color: #665F5D;
+    --grid3-color: #5B5553;
+    --gradient-color: #F2A88A;
+    --white: #fff;
+    --black: #000;
+    --btn-color: #999999;
+    --grey-color: #6D6E71;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
