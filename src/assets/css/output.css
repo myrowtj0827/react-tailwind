@@ -772,6 +772,7 @@ a {
 
 .txt-34 {
   font-size: 34px;
+  min-height: 120px;
 }
 
 .txt-30 {
@@ -1045,11 +1046,11 @@ a {
   bottom: 100px;
   display: flex;
   justify-content: center;
-  padding: 10px !important;
-  min-width: 80%;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 70%;
   height: 100px;
+  max-height: 120px;
 }
 
 .btn-white-border {
@@ -1095,7 +1096,7 @@ a {
 .number-icon {
   margin: 0 auto;
   max-width: 100%;
-  width: 50%;
+  width: 40%;
 }
 
 .bg-footer {
@@ -1118,7 +1119,6 @@ a {
   padding: 10px 80px;
   border-radius: 20px;
   border: 2px solid var(--main-color);
-  font-size: 80px;
   background-color: var(--main-color);
   color: var(--white);
   transition: all .15s linear;
@@ -1180,6 +1180,628 @@ textarea {
   overflow-y: auto;
   max-height: 70vh;
   word-break: break-all;
+}
+
+.flexbox-fix:nth-child(4), .flexbox-fix:nth-child(3) {
+  display: none !important;
+}
+
+.sketch-picker {
+  box-shadow: none !important;
+}
+
+.phone-icon-hide {
+  display: block;
+}
+
+.phone-icon-show {
+  display: none;
+}
+
+.show1200 {
+  display: none;
+}
+
+.hidden1200 {
+  display: block;
+}
+
+.slider-show {
+  display: none;
+}
+
+.slider-hidden {
+  display: block;
+}
+
+.owl-carousel {
+  display: block !important;
+}
+
+.slider-banner {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  float: right;
+}
+
+.img-item {
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-carousel .owl-item img {
+  margin: 20px auto;
+  width: 80px !important;
+  text-align: center !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #808080 !important;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  display: block !important;
+  position: relative;
+  margin: -30px 10px 0;
+  outline: none !important;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+  position: absolute;
+  margin-top: 0;
+  border: none;
+  padding-top: 15px;
+  width: 40px;
+  font-size: 40px !important;
+  color: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  display: none !important;
+  top: 50%;
+  transform: translateY(-120%);
+  left: -15px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  display: none !important;
+  top: 50%;
+  transform: translateY(-120%);
+  right: -15px;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  outline: none !important;
+}
+
+.owl-dots, .owl-nav {
+  display: flex;
+  margin: 0 !important;
+  text-align: 0 !important;
+  justify-content: center;
+}
+
+@media (max-width: 1440px) {
+  .txt-90 {
+    font-size: 70px !important;
+  }
+
+  .txt-80 {
+    font-size: 64px !important;
+  }
+
+  .txt-70 {
+    font-size: 55px !important;
+  }
+
+  .txt-60 {
+    font-size: 48px !important;
+  }
+
+  .txt-54 {
+    font-size: 42px !important;
+  }
+
+  .txt-40 {
+    font-size: 32px !important;
+  }
+
+  .txt-34 {
+    font-size: 28px !important;
+  }
+
+  .txt-30 {
+    font-size: 26px !important;
+  }
+
+  .txt-28 {
+    font-size: 24px !important;
+  }
+
+  .btn-sign {
+    font-size: 40px !important;
+  }
+
+  .grid4 {
+    grid-column-gap: 30px !important;
+  }
+
+  .key-benefits {
+    padding: 70px !important;
+  }
+
+  txt-width {
+    width: 80% !important;
+  }
+
+  .icons-body {
+    padding: 0 100px 100px !important;
+  }
+
+  .icons-top {
+    padding-top: 70px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .bg-middle {
+    padding: 100px !important;
+  }
+
+  .pt-20 {
+    padding-top: 45px !important;
+  }
+
+  .who-body {
+    padding: 30px 0 30px 30px !important;
+  }
+
+  .pt-20.txt-bold {
+    padding-top: 25px !important;
+  }
+
+  .footer-p {
+    padding: 100px 150px 140px !important;
+  }
+
+  .btn-footer {
+    padding: unset !important;
+    width: 100% !important;
+    max-width: 30% !important;
+    min-height: 100px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .embed-width {
+    max-width: 80% !important;
+  }
+
+  .grid-body {
+    padding: 15px 50px !important;
+  }
+
+  .grid3 {
+    grid-column-gap: 30px !important;
+  }
+
+  .grid4 {
+    grid-template-columns: 1fr 1fr !important;
+    grid-row-gap: 20px !important;
+  }
+
+  .grid3.icons {
+    grid-column-gap: 20px !important;
+  }
+
+  .icons-body {
+    padding: 0 80px 80px !important;
+  }
+
+  .bg-middle {
+    padding: 100px 40px !important;
+  }
+
+  .grid24 {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto !important;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+
+  .show1200 {
+    display: block;
+  }
+
+  .hidden1200 {
+    display: none;
+  }
+
+  .who-body {
+    padding: 30px 0 90px 30px !important;
+  }
+
+  .loves-mobile {
+    padding-right: 30px !important;
+  }
+
+  .click-example-body {
+    padding: 90px 50px !important;
+  }
+
+  .number-icon {
+    width: 60% !important;
+  }
+
+  .footer-p {
+    padding: 100px 80px 140px !important;
+  }
+
+  .phone-p {
+    padding-top: 130px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .pt-140 {
+    padding-top: 110px !important;
+  }
+
+  .grid-body {
+    padding: 15px 30px !important;
+  }
+
+  .grid3 {
+    grid-column-gap: 15px !important;
+  }
+
+  .grid3.icons {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .phone-icon-hide {
+    display: none;
+  }
+
+  .phone-icon-show {
+    display: block;
+  }
+
+  .click-example-body {
+    padding: 90px 30px !important;
+  }
+
+  .txt-80 {
+    font-size: 55px !important;
+  }
+
+  .footer-p {
+    padding: 60px 50px 100px !important;
+  }
+
+  .btn-footer {
+    max-width: 40% !important;
+    min-height: 100px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .txt-90 {
+    font-size: 60px !important;
+  }
+
+  .txt-80 {
+    font-size: 55px !important;
+  }
+
+  .txt-70 {
+    font-size: 50px !important;
+  }
+
+  .txt-60 {
+    font-size: 42px !important;
+  }
+
+  .txt-54 {
+    font-size: 38px !important;
+  }
+
+  .txt-40 {
+    font-size: 30px !important;
+  }
+
+  .txt-34 {
+    font-size: 26px !important;
+  }
+
+  .txt-30 {
+    font-size: 24px !important;
+  }
+
+  .txt-28 {
+    font-size: 23px !important;
+  }
+
+  .txt-26 {
+    font-size: 22px !important;
+  }
+
+  .txt-24 {
+    font-size: 20px !important;
+  }
+
+  .embed-width {
+    max-width: 90% !important;
+  }
+
+  .btn-sign {
+    padding: 7px 30px !important;
+    font-size: 35px !important;
+  }
+
+  .pt-140 {
+    padding-top: 100px !important;
+  }
+
+  .img-width {
+    padding: 0 20px !important;
+  }
+
+  .slider-show {
+    display: block !important;
+  }
+
+  .slider-hidden {
+    display: none !important;
+  }
+
+  .grid3 {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 1fr !important;
+    grid-row-gap: 30px;
+  }
+
+  .grid4 {
+    grid-column-gap: 20px !important;
+  }
+
+  .txt-width {
+    width: 90% !important;
+  }
+
+  .coming-soon {
+    top: -45px !important;
+    right: -45px !important;
+    width: 90px !important;
+    height: 90px !important;
+    font-size: 18px !important;
+  }
+
+  .key-benefits {
+    padding: 50px !important;
+  }
+
+  .icons-body {
+    padding: 20px 20px 50px !important;
+  }
+
+  .icons-top {
+    padding: 40px 0 20px !important;
+  }
+
+  .grid3.txt-left.grid-text {
+    grid-row-gap: 70px !important;
+  }
+
+  .txt-left.grid-text {
+    text-align: center !important;
+  }
+
+  .bg-middle {
+    padding: 100px !important;
+  }
+
+  .phone-flex {
+    display: flex !important;
+    text-align: left !important;
+    justify-content: space-between;
+  }
+
+  .grid3.numbers {
+    grid-auto-rows: auto !important;
+  }
+
+  .circle-number {
+    display: flex !important;
+    margin-top: 35px;
+    margin-right: 10px;
+  }
+
+  .bg-middle.numbers {
+    padding: 100px 50px !important;
+  }
+
+  .phone-left {
+    display: flex;
+    justify-content: left;
+  }
+
+  .account4 {
+    width: 100% !important;
+    max-width: 130px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .pt-140 {
+    padding-top: 70px !important;
+  }
+
+  .txt-90 {
+    font-size: 45px !important;
+  }
+
+  .txt-80 {
+    font-size: 42px !important;
+  }
+
+  .txt-70 {
+    font-size: 40px !important;
+  }
+
+  .txt-60 {
+    font-size: 34px !important;
+  }
+
+  .txt-54 {
+    font-size: 30px !important;
+  }
+
+  .txt-40 {
+    font-size: 24px !important;
+  }
+
+  .txt-34 {
+    font-size: 22px !important;
+  }
+
+  .btn-sign {
+    border-radius: 10px !important;
+    padding: 5px 20px !important;
+    font-size: 25px !important;
+  }
+
+  .txt-30 {
+    font-size: 20px !important;
+  }
+
+  .txt-28 {
+    font-size: 19px !important;
+  }
+
+  .txt-26 {
+    font-size: 18px !important;
+  }
+
+  .txt-24 {
+    font-size: 16px !important;
+  }
+
+  .pt-20 {
+    padding-top: 30px !important;
+  }
+
+  .icon9 {
+    width: 150px !important;
+  }
+
+  .icon9.phone {
+    width: 110px !important;
+  }
+
+  .icons-top {
+    padding: 10px 0 10px !important;
+  }
+
+  .grid3.icons {
+    grid-row-gap: 10px !important;
+  }
+
+  .bg-middle {
+    padding: 80px 40px !important;
+  }
+
+  .footer-p {
+    padding: 100px 20px 100px !important;
+  }
+
+  .phone-p {
+    padding-top: 110px !important;
+  }
+
+  .btn-footer {
+    max-width: 50% !important;
+    min-height: 70px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .txt-90 {
+    font-size: 40px !important;
+  }
+
+  .txt-80 {
+    font-size: 38px !important;
+  }
+
+  .txt-70 {
+    font-size: 35px !important;
+  }
+
+  .txt-60 {
+    font-size: 30px !important;
+  }
+
+  .txt-54 {
+    font-size: 26px !important;
+  }
+
+  .btn-sign {
+    padding: 3px 15px !important;
+    font-size: 22px !important;
+  }
+
+  .txt-34 {
+    font-size: 18px !important;
+  }
+
+  .txt-30 {
+    font-size: 16px !important;
+  }
+
+  .txt-28 {
+    font-size: 16px !important;
+  }
+
+  .txt-26 {
+    font-size: 16px !important;
+  }
+
+  .coming-soon {
+    top: -30px !important;
+    right: -30px !important;
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 14px !important;
+  }
+
+  .key-benefits {
+    padding: 35px !important;
+  }
+
+  .grid4 {
+    grid-column-gap: 10px !important;
+  }
+
+  .account4 {
+    margin-top: 20px !important;
+    max-width: 80px !important;
+  }
+
+  .bg-middle.numbers {
+    padding: 80px 25px !important;
+  }
+
+  .btn-footer {
+    max-width: 60% !important;
+  }
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {

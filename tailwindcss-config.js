@@ -128,36 +128,6 @@ module.exports = {
       };
       addComponents(default_option);
 
-      //addComponents([
-      //   {
-      //     '@media (min-width: 500px)': {
-      //       // ...
-      //     }
-      //   },
-      //   {
-      //     '@media (min-width: 500px)': {
-      //       // ...
-      //     }
-      //   },
-      //   {
-      //     '@media (min-width: 500px)': {
-      //       // ...
-      //     }
-      //   },
-      // ])
-      // addComponents({
-      //   '.card': {
-      //     backgroundColor: '#fff',
-      //     borderRadius: '.25rem',
-      //     boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
-      //     '&:hover': {
-      //       boxShadow: '0 10px 15px rgba(0,0,0,0.2)',
-      //     },
-      //     '@media (min-width: 500px)': {
-      //       borderRadius: '.5rem',
-      //     }
-      //   }
-      // });
       //font-family, font size, color
       const style_txt = {
         '.txt-medium': {
@@ -206,6 +176,7 @@ module.exports = {
         },
         '.txt-34': {
           fontSize: '34px',
+          minHeight: '120px',
         },
         '.txt-30': {
           fontSize: '30px',
@@ -438,10 +409,10 @@ module.exports = {
           bottom: '100px',
           display: 'flex',
           justifyContent: 'center',
-          padding: '10px !important',
-          minWidth: '80%',
           width: 'fit-content',
+          maxWidth: '70%',
           height: '100px',
+          maxHeight: '120px',
         },
         '.btn-white-border': {
           padding: '5px 15px',
@@ -478,7 +449,7 @@ module.exports = {
         '.number-icon': {
           margin: '0 auto',
           maxWidth: '100%',
-          width: '50%',
+          width: '40%',
         },
         '.bg-footer': {
           width: '100%',
@@ -498,7 +469,6 @@ module.exports = {
           padding: '10px 80px',
           borderRadius: '20px',
           border: '2px solid var(--main-color)',
-          fontSize: '80px',
           backgroundColor: 'var(--main-color)',
           color: 'var(--white)',
           transition: 'all .15s linear',
@@ -555,9 +525,534 @@ module.exports = {
           overflowY: 'auto',
           maxHeight: '70vh',
           wordBreak: 'break-all',
-        }
+        },
+
+        /**
+         * color-picker customizing
+         */
+        '.flexbox-fix:nth-child(4), .flexbox-fix:nth-child(3)': {
+          display: 'none !important',
+        },
+        '.sketch-picker': {
+          boxShadow: 'none !important',
+        },
+        // '.saturation-white > div:nth-child(2) > div': {
+        //   width: '12px !important',
+        //   height: '12px !important',
+        //   backgroundColor: 'var(--black)',
+        // },
+        // '.hue-horizontal > div:nth-child(1) > div': {
+        //   borderRadius: '100%',
+        //   width: '12px !important',
+        //   height: '12px !important',
+        //   backgroundColor: 'red',
+        // }
+        '.phone-icon-hide': {
+          display: 'block',
+        },
+        '.phone-icon-show': {
+          display: 'none',
+        },
+        '.show1200': {
+          display: 'none'
+        },
+        '.hidden1200': {
+          display: 'block'
+        },
+        /**
+         * Slider Customizing
+         */
+        '.slider-show': {
+          display: 'none',
+        },
+        '.slider-hidden': {
+          display: 'block',
+        },
+        '.owl-carousel': {
+          display: 'block !important',
+        },
+        '.slider-banner': {
+          width: '100%',
+          maxWidth: '100%',
+          height: '100%',
+          maxHeight: '100%',
+          float: 'right',
+        },
+        '.img-item': {
+          width: '100%',
+          maxWidth: '100%',
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
+        '.owl-carousel .owl-item img': {
+          margin: '20px auto',
+          width: '80px !important',
+          textAlign: 'center !important',
+        },
+        '.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span': {
+          background: '#808080 !important',
+        },
+        '.owl-theme .owl-dots .owl-dot span': {
+          display: 'block !important',
+          position: 'relative',
+          margin: '-30px 10px 0',
+          outline: 'none !important',
+        },
+        '.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev': {
+          position: 'absolute',
+          marginTop: '0',
+          border: 'none',
+          paddingTop: '15px',
+          width: '40px',
+          fontSize: '40px !important',
+          color: 'inherit',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        },
+        '.owl-carousel .owl-nav button.owl-prev': {
+          display: 'none !important',
+          top: '50%',
+          transform: 'translateY(-120%)',
+          left: '-15px',
+        },
+        '.owl-carousel .owl-nav button.owl-next': {
+          display: 'none !important',
+          top: '50%',
+          transform: 'translateY(-120%)',
+          right: '-15px',
+        },
+        '.owl-theme .owl-dots .owl-dot': {
+          outline: 'none !important',
+        },
+        '.owl-dots, .owl-nav': {
+          display: 'flex',
+          margin: '0 !important',
+          textAlign: '0 !important',
+          justifyContent: 'center',
+        },
       };
       addComponents(custom);
+
+      /**
+       * Responsive
+       */
+      addComponents([
+        {
+          '@media (max-width: 1440px)': {
+            '.txt-90': {
+              fontSize: '70px !important',
+            },
+            '.txt-80': {
+              fontSize: '64px !important',
+            },
+            '.txt-70': {
+              fontSize: '55px !important',
+            },
+            '.txt-60': {
+              fontSize: '48px !important',
+            },
+            '.txt-54': {
+              fontSize: '42px !important',
+            },
+            '.txt-40': {
+              fontSize: '32px !important',
+            },
+            '.txt-34': {
+              fontSize: '28px !important',
+            },
+            '.txt-30': {
+              fontSize: '26px !important',
+            },
+            '.txt-28': {
+              fontSize: '24px !important',
+            },
+            '.btn-sign': {
+              fontSize: '40px !important',
+            },
+            '.grid4': {
+              gridColumnGap: '30px !important',
+            },
+            '.key-benefits': {
+              padding: '70px !important',
+            },
+            'txt-width': {
+              width: '80% !important',
+            },
+            '.icons-body': {
+              padding: '0 100px 100px !important',
+            },
+            '.icons-top': {
+              paddingTop: '70px !important',
+              paddingBottom: '30px !important',
+            },
+            '.bg-middle': {
+              padding: '100px !important',
+            },
+            '.pt-20': {
+              paddingTop: '45px !important',
+            },
+            '.who-body': {
+              padding: '30px 0 30px 30px !important',
+            },
+            '.pt-20.txt-bold': {
+              paddingTop: '25px !important',
+            },
+            '.footer-p': {
+              padding: '100px 150px 140px !important',
+            },
+            '.btn-footer': {
+              padding: 'unset !important',
+              width: '100% !important',
+              maxWidth: '30% !important',
+              minHeight: '100px !important'
+            },
+          }
+        },
+
+        {
+          '@media (max-width: 1200px)': {
+            '.embed-width': {
+              maxWidth: '80% !important',
+            },
+            '.grid-body': {
+              padding: '15px 50px !important',
+            },
+            '.grid3': {
+              gridColumnGap: '30px !important',
+            },
+            '.grid4': {
+              gridTemplateColumns: '1fr 1fr !important',
+              gridRowGap: '20px !important',
+            },
+            '.grid3.icons': {
+              gridColumnGap: '20px !important',
+            },
+            '.icons-body': {
+              padding: '0 80px 80px !important',
+            },
+            '.bg-middle': {
+              padding: '100px 40px !important',
+            },
+            '.grid24': {
+              gridTemplateColumns: '1fr !important',
+              gridAutoRows: 'auto !important',
+            },
+            '.grid2': {
+              gridTemplateColumns: '1fr 1fr 1fr !important',
+            },
+            '.show1200': {
+              display: 'block',
+            },
+            '.hidden1200': {
+              display: 'none',
+            },
+            '.who-body': {
+              padding: '30px 0 90px 30px !important',
+            },
+            '.loves-mobile': {
+              paddingRight: '30px !important',
+            },
+            '.click-example-body': {
+              padding: '90px 50px !important',
+            },
+            '.number-icon': {
+              width: '60% !important',
+            },
+            '.footer-p': {
+              padding: '100px 80px 140px !important',
+            },
+            '.phone-p': {
+              paddingTop: '130px !important',
+            },
+          }
+        },
+
+        {
+          '@media (max-width: 992px)': {
+            '.pt-140': {
+              paddingTop: '110px !important',
+            },
+            '.grid-body': {
+              padding: '15px 30px !important',
+            },
+            '.grid3': {
+              gridColumnGap: '15px !important',
+            },
+            '.grid3.icons': {
+              gridTemplateColumns: '1fr 1fr !important',
+            },
+            '.phone-icon-hide': {
+              display: 'none',
+            },
+            '.phone-icon-show': {
+              display: 'block',
+            },
+            '.click-example-body': {
+              padding: '90px 30px !important',
+            },
+            '.txt-80': {
+              fontSize: '55px !important',
+            },
+            '.footer-p': {
+              padding: '60px 50px 100px !important',
+            },
+            '.btn-footer': {
+              maxWidth: '40% !important',
+              minHeight: '100px !important'
+            },
+          }
+        },
+
+        {
+          '@media (max-width: 768px)': {
+            '.txt-90': {
+              fontSize: '60px !important',
+            },
+            '.txt-80': {
+              fontSize: '55px !important',
+            },
+            '.txt-70': {
+              fontSize: '50px !important',
+            },
+            '.txt-60': {
+              fontSize: '42px !important',
+            },
+            '.txt-54': {
+              fontSize: '38px !important',
+            },
+            '.txt-40': {
+              fontSize: '30px !important',
+            },
+            '.txt-34': {
+              fontSize: '26px !important',
+            },
+            '.txt-30': {
+              fontSize: '24px !important',
+            },
+            '.txt-28': {
+              fontSize: '23px !important',
+            },
+            '.txt-26': {
+              fontSize: '22px !important',
+            },
+            '.txt-24': {
+              fontSize: '20px !important',
+            },
+            '.embed-width': {
+              maxWidth: '90% !important',
+            },
+            '.btn-sign': {
+              padding: '7px 30px !important',
+              fontSize: '35px !important',
+            },
+            '.pt-140': {
+              paddingTop: '100px !important',
+            },
+            '.img-width': {
+              padding: '0 20px !important',
+            },
+            '.slider-show': {
+              display: 'block !important',
+            },
+            '.slider-hidden': {
+              display: 'none !important',
+            },
+            '.grid3': {
+              gridTemplateColumns: '1fr !important',
+              gridAutoRows: '1fr !important',
+              gridRowGap: '30px',
+            },
+            '.grid4': {
+              gridColumnGap: '20px !important',
+            },
+            '.txt-width': {
+              width: '90% !important',
+            },
+            '.coming-soon': {
+              top: '-45px !important',
+              right: '-45px !important',
+              width: '90px !important',
+              height: '90px !important',
+              fontSize: '18px !important',
+            },
+            '.key-benefits': {
+              padding: '50px !important',
+            },
+            '.icons-body': {
+              padding: '20px 20px 50px !important',
+            },
+            '.icons-top': {
+              padding: '40px 0 20px !important',
+            },
+            '.grid3.txt-left.grid-text': {
+              gridRowGap: '70px !important',
+            },
+            '.txt-left.grid-text': {
+              textAlign: 'center !important',
+            },
+            '.bg-middle': {
+              padding: '100px !important',
+            },
+            '.phone-flex': {
+              display: 'flex !important',
+              textAlign: 'left !important',
+              justifyContent: 'space-between',
+            },
+            '.grid3.numbers': {
+              gridAutoRows: 'auto !important',
+            },
+            '.circle-number': {
+              display: 'flex !important',
+              marginTop: '35px',
+              marginRight: '10px',
+            },
+            '.bg-middle.numbers': {
+              padding: '100px 50px !important',
+            },
+            '.phone-left': {
+              display: 'flex',
+              justifyContent: 'left',
+            },
+            '.account4': {
+              width: '100% !important',
+              maxWidth: '130px !important',
+            },
+          }
+        },
+
+        {
+          '@media (max-width: 600px)': {
+            '.pt-140': {
+              paddingTop: '70px !important',
+            },
+            '.txt-90': {
+              fontSize: '45px !important',
+            },
+            '.txt-80': {
+              fontSize: '42px !important',
+            },
+            '.txt-70': {
+              fontSize: '40px !important',
+            },
+            '.txt-60': {
+              fontSize: '34px !important',
+            },
+            '.txt-54': {
+              fontSize: '30px !important',
+            },
+            '.txt-40': {
+              fontSize: '24px !important',
+            },
+            '.txt-34': {
+              fontSize: '22px !important',
+            },
+            '.btn-sign': {
+              borderRadius: '10px !important',
+              padding: '5px 20px !important',
+              fontSize: '25px !important',
+            },
+            '.txt-30': {
+              fontSize: '20px !important',
+            },
+            '.txt-28': {
+              fontSize: '19px !important',
+            },
+            '.txt-26': {
+              fontSize: '18px !important',
+            },
+            '.txt-24': {
+              fontSize: '16px !important',
+            },
+            '.pt-20': {
+              paddingTop: '30px !important',
+            },
+            '.icon9': {
+              width: '150px !important',
+            },
+            '.icon9.phone': {
+              width: '110px !important',
+            },
+            '.icons-top': {
+              padding: '10px 0 10px !important',
+            },
+            '.grid3.icons': {
+              gridRowGap: '10px !important',
+            },
+            '.bg-middle': {
+              padding: '80px 40px !important',
+            },
+            '.footer-p': {
+              padding: '100px 20px 100px !important',
+            },
+            '.phone-p': {
+              paddingTop: '110px !important',
+            },
+            '.btn-footer': {
+              maxWidth: '50% !important',
+              minHeight: '70px !important',
+            },
+          }
+        },
+
+        {
+          '@media (max-width: 480px)': {
+            '.txt-90': {
+              fontSize: '40px !important',
+            },
+            '.txt-80': {
+              fontSize: '38px !important',
+            },
+            '.txt-70': {
+              fontSize: '35px !important',
+            },
+            '.txt-60': {
+              fontSize: '30px !important',
+            },
+            '.txt-54': {
+              fontSize: '26px !important',
+            },
+            '.btn-sign': {
+              padding: '3px 15px !important',
+              fontSize: '22px !important',
+            },
+            '.txt-34': {
+              fontSize: '18px !important',
+            },
+            '.txt-30': {
+              fontSize: '16px !important',
+            },
+            '.txt-28': {
+              fontSize: '16px !important',
+            },
+            '.txt-26': {
+              fontSize: '16px !important',
+            },
+            '.coming-soon': {
+              top: '-30px !important',
+              right: '-30px !important',
+              width: '60px !important',
+              height: '60px !important',
+              fontSize: '14px !important',
+            },
+            '.key-benefits': {
+              padding: '35px !important',
+            },
+            '.grid4': {
+              gridColumnGap: '10px !important',
+            },
+            '.account4': {
+              marginTop: '20px !important',
+              maxWidth: '80px !important',
+            },
+            '.bg-middle.numbers': {
+              padding: '80px 25px !important',
+            },
+            '.btn-footer': {
+              maxWidth: '60% !important',
+            },
+          }
+        },
+      ]);
     }),
   ],
 };

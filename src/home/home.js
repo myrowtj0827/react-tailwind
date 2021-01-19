@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import OwlCarousel from 'react-owl-carousel';
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Settings from "./settings";
@@ -41,20 +42,45 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <div className="pt-140">
+                <div className="pt-140 pt-120">
                     <div className="grid-body justify-cover">
                         <div className="pb-8 txt-24 txt-left gray-color">Click to expand examples</div>
-                        <div className="flex-grid grid3">
-                            <div className="flex-left img-hover mouse-cursor">
-                                <img src={require('../assets/images/screen-image1.png')} className="" alt='' />
-                            </div>
-                            <div className="flex-left img-hover mouse-cursor">
-                                <img src={require('../assets/images/screen-image2.png')} className="" alt='' />
-                            </div>
-                            <div className="flex-left img-hover mouse-cursor">
-                                <img src={require('../assets/images/screen-image3.png')} className="" alt='' />
+                        {/*<div className="slider-hidden">*/}
+                        <div>
+                            <div className="flex-grid grid3">
+                                <div className="flex-left img-hover mouse-cursor">
+                                    <img src={require('../assets/images/screen-image1.png')} className="img-item" alt='' />
+                                </div>
+                                <div className="flex-left img-hover mouse-cursor">
+                                    <img src={require('../assets/images/screen-image2.png')} className="img-item" alt='' />
+                                </div>
+                                <div className="flex-left img-hover mouse-cursor">
+                                    <img src={require('../assets/images/screen-image3.png')} className="img-item" alt='' />
+                                </div>
                             </div>
                         </div>
+
+                        {/*  3 image Slider  */}
+                        {/*<div className="slider-banner slider-show">*/}
+                        {/*    <OwlCarousel items={1}*/}
+                        {/*                 className="owl-theme animate-fading"*/}
+                        {/*                 loop*/}
+                        {/*                 nav*/}
+                        {/*                 margin={4}*/}
+                        {/*                 autoplayTimeout={2000}*/}
+                        {/*                 autoplay={true}*/}
+                        {/*    >*/}
+                        {/*        <div>*/}
+                        {/*            <img src={require('../assets/images/screen-image1.png')} className="img-item" alt='' />*/}
+                        {/*        </div>*/}
+                        {/*        <div>*/}
+                        {/*            <img src={require('../assets/images/screen-image2.png')} className="img-item" alt='' />*/}
+                        {/*        </div>*/}
+                        {/*        <div>*/}
+                        {/*            <img src={require('../assets/images/screen-image3.png')} className="img-item" alt='' />*/}
+                        {/*        </div>*/}
+                        {/*    </OwlCarousel>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
 
@@ -107,67 +133,73 @@ class Home extends Component {
 
                 {/*  Icons  */}
                 <div className="icons-body txt-28">
-                    <div className="flex-grid grid3">
+                    <div className="flex-grid grid3 icons">
                         <div className="icons-top">
                             <div className='justify-center'>
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-01.svg')} className="" alt="" />
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-01.svg')} className="icon9" alt="" />
                             </div>
                             <div className="pt-2 icon-txt txt-semi-bold">Audio and video chat up to 200 participants</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-02.svg')} alt="" />
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-02.svg')} className="icon9" alt="" />
                             </div>
                             <div className="pt-2 icon-txt txt-semi-bold">Text chat with images, reactions, and moderators</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-03.svg')} alt="" />
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-03.svg')} className="icon9" alt="" />
                             </div>
                             <div className="pt-2 icon-txt txt-semi-bold">Screen sharing</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-04.svg')} alt="" />
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-04.svg')} className="icon9" alt="" />
                             </div>
                             <div className="pt-2 icon-txt txt-semi-bold">Breakout rooms</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-19.svg')} alt="" />
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-19.svg')} className="icon9" alt="" />
                             </div>
                             <div className="pt-2 icon-txt txt-semi-bold">Speaker view + grid view</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-07.svg')} alt="" />
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-07.svg')} className="icon9" alt="" />
                             </div>
                             <div className="pt-2 icon-txt txt-semi-bold">Livestream broadcasting</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-08.svg')} alt="" />
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-08.svg')} className="icon9" alt="" />
                             </div>
                             <div className="pt-2 icon-txt txt-semi-bold">Guests can join without accounts</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-09.svg')} alt="" />
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-09.svg')} className="icon9" alt="" />
                             </div>
                             <div className="pt-2 icon-txt txt-semi-bold">Guests can join without plug-ins or apps</div>
                         </div>
-                        <div className="icons-top">
+                        <div className="icons-top phone-icon-hide">
                             <div className='justify-center'>
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-10.svg')} alt="" />
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-10.svg')} className="icon9" alt="" />
                             </div>
                             <div className="pt-2 icon-txt txt-semi-bold">Stellar customer support</div>
                         </div>
+                    </div>
+                    <div className="icons-top phone-icon-show">
+                        <div className='justify-center'>
+                            <img src={require('../assets/images/Mixily_LandingPage_Icon-10.svg')} className="icon9 phone" alt="" />
+                        </div>
+                        <div className="pt-2 icon-txt txt-semi-bold">Stellar customer support</div>
                     </div>
                 </div>
 
                 {/*  Text middle footer  */}
                 <div className="bg-middle txt-40 white-color">
-                    <div className="flex-grid grid3 txt-left">
+                    <div className="flex-grid grid3 txt-left grid-text">
                         <div>
                             <div className="">
                                 "I started 2021 super stressed out about organizing my events, and now I'm excited and relieved!"
@@ -200,8 +232,11 @@ class Home extends Component {
 
                 {/*  Who loves us  */}
                 <div className="who-body">
+                    <div className="flex-left show1200">
+                        <img src={require('../assets/images/screen-image8.png')} className="" alt='Virtual Venue' />
+                    </div>
                     <div className="flex-grid grid24">
-                        <div className="">
+                        <div className="loves-mobile">
                             <div className="pt-20 txt-54 gray-color txt-semi-bold">Who loves us</div>
                             <div className="pt-5 flex-grid grid2 txt-26">
                                 <div className="pt-20 txt-bold">
@@ -242,7 +277,7 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex-left film-width">
+                        <div className="flex-left hidden1200">
                             <img src={require('../assets/images/screen-image8.png')} className="" alt='Virtual Venue' />
                         </div>
                     </div>
@@ -277,8 +312,8 @@ class Home extends Component {
                                 <div>Standard fees</div>
                             </div>
                         </div>
-                        <div className="pt-20">
-                            <div className="btn-sign btn-p txt-semi-bold mouse-cursor">SIGN UP</div>
+                        <div className="pt-20 justify-center">
+                            <div className="btn-sign btn-p txt-semi-bold mouse-cursor justify-center">SIGN UP</div>
                         </div>
                     </div>
                     <div className="community">
@@ -302,8 +337,8 @@ class Home extends Component {
                                 <div>Standard fees</div>
                             </div>
                         </div>
-                        <div className="pt-20">
-                            <div className="btn-sign btn-p txt-semi-bold mouse-cursor">SIGN UP</div>
+                        <div className="pt-20 justify-center">
+                            <div className="btn-sign btn-p txt-semi-bold mouse-cursor justify-center">SIGN UP</div>
                         </div>
                     </div>
                     <div className="enterprise">
@@ -325,14 +360,14 @@ class Home extends Component {
                                 <div>Custom fees</div>
                             </div>
                         </div>
-                        <div className="pt-20">
-                            <div className="btn-sign btn-p txt-semi-bold mouse-cursor">CONTACT</div>
+                        <div className="pt-20 justify-center">
+                            <div className="btn-sign btn-p txt-semi-bold mouse-cursor justify-center">CONTACT</div>
                         </div>
                     </div>
                 </div>
 
                 {/*  Click to expand examples  */}
-                <div className="click-example-body">
+                <div className="click-example-body slider-hidden">
                     <div className="pb-8 txt-24 txt-left gray-color txt-weight-500">Click to expand examples</div>
                     <div className="flex-grid grid3">
                         <div className="img-hover mouse-cursor">
@@ -348,54 +383,66 @@ class Home extends Component {
                 </div>
 
                 {/*  Text middle footer  */}
-                <div className="bg-middle txt-40 white-color">
-                    <div className="flex-grid grid3">
-                        <div>
-                            <div className="circle-number justify-center mouse-cursor">
-                                1
+                <div className="bg-middle numbers txt-40 white-color">
+                    <div className="flex-grid grid3 numbers">
+                        <div className="phone-flex">
+                            <div className="phone-left">
+                                <div className="circle-number justify-center mouse-cursor">
+                                    1
+                                </div>
+                                <div>
+                                    <div className="pt-5 txt-80">
+                                        Design
+                                    </div>
+                                    <div className="txt-34">
+                                        custom venue
+                                    </div>
+                                </div>
                             </div>
-                            <div className="pt-5 txt-80">
-                                Design
-                            </div>
-                            <div className="txt-34">
-                                custom venue
-                            </div>
-                            <div className="pt-10">
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-17.png')} className="number-icon" alt="" />
-                            </div>
-                        </div>
-                        <div>
-                            <div className="circle-number justify-center mouse-cursor">
-                                2
-                            </div>
-                            <div className="pt-5 txt-80">
-                                Embed
-                            </div>
-                            <div className="txt-34">
-                                into your own website
-                            </div>
-                            <div className="pt-10">
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-18.png')} className="number-icon" alt="" />
+                            <div className="">
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-17.png')} className="number-icon account4" alt="" />
                             </div>
                         </div>
-                        <div>
-                            <div className="circle-number justify-center mouse-cursor">
-                                3
+                        <div className="phone-flex">
+                            <div className="phone-left">
+                                <div className="circle-number justify-center mouse-cursor">
+                                    2
+                                </div>
+                                <div>
+                                    <div className="pt-5 txt-80">
+                                        Embed
+                                    </div>
+                                    <div className="txt-34">
+                                        into your own website
+                                    </div>
+                                </div>
                             </div>
-                            <div className="pt-5 txt-80">
-                                Gather
+                            <div className="">
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-18.png')} className="number-icon account4" alt="" />
                             </div>
-                            <div className="txt-34">
-                                your people
+                        </div>
+                        <div className="phone-flex">
+                            <div className="phone-left">
+                                <div className="circle-number justify-center mouse-cursor">
+                                    3
+                                </div>
+                                <div>
+                                    <div className="pt-5 txt-80">
+                                        Gather
+                                    </div>
+                                    <div className="txt-34">
+                                        your people
+                                    </div>
+                                </div>
                             </div>
-                            <div className="pt-20">
-                                <img src={require('../assets/images/Mixily_LandingPage_Icon-19.png')} className="number-icon" alt="" />
+                            <div className="pt-10">
+                                <img src={require('../assets/images/Mixily_LandingPage_Icon-19.png')} className="number-icon account4" alt="" />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="justify-center mouse-cursor pt-40">
-                    <div className="btn-footer txt-semi-bold">SIGN UP</div>
+                    <div className="btn-footer txt-80 txt-semi-bold justify-center">SIGN UP</div>
                 </div>
                 {/*  Footer  */}
                 <div className="pt-20 bg-footer">
@@ -414,7 +461,7 @@ class Home extends Component {
                                     "Learn more"
                             }
                         </div>
-                        <div className="pt-40 txt-40">
+                        <div className="pt-40 txt-40 phone-p">
                             <div>
                                 <i className="far fa-copyright" aria-hidden="true"></i>
                                 {new Date().getFullYear()} Mixily Inc.

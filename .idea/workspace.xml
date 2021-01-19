@@ -29,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/hourly/free" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -43,6 +43,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\upwork\3_2021-1-17_react-design\project-ui\src\assets\images" />
       <recent name="D:\@@@_working\subject_fast\src" />
     </key>
   </component>
@@ -135,7 +136,7 @@
       <workItem from="1597298971096" duration="2364000" />
       <workItem from="1597346597462" duration="59000" />
       <workItem from="1610845498858" duration="9212000" />
-      <workItem from="1610939566540" duration="70934000" />
+      <workItem from="1610939566540" duration="99810000" />
     </task>
     <servers />
   </component>

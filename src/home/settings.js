@@ -1,22 +1,91 @@
 import React, { Component } from 'react';
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.default.css';
-
+import { SketchPicker } from 'react-color';
 class Settings extends Component {
     constructor(props) {
         super(props);
         this.state = {
             txt_footer: 'Virtual Venue is a product of Mixily, an event hosting platform that allows the sending of invitations, collection of rsvps, and selling of tickets.',
             flag: false,
+            color: {
+                r: '241',
+                g: '112',
+                b: '19',
+                a: '1',
+            },
+            color_hex: '',
+            color_r: '',
+            color_g: '',
+            color_b: '',
+            color_c: '',
+            color_m: '',
+            color_y: '',
+            color_k: '',
+        }
+    };
+    componentDidMount() {
+        let results = this.getRgbToCmyk(Number(this.state.color.r), Number(this.state.color.g), Number(this.state.color.b), true);
+        this.setState({
+            color_hex: "#" + this.getRgbToHex(Number(this.state.color.r), Number(this.state.color.g), Number(this.state.color.b)),
+            color_r: Number(this.state.color.r),
+            color_g: Number(this.state.color.g),
+            color_b: Number(this.state.color.b),
+            color_c: results.c,
+            color_m: results.m,
+            color_y: results.y,
+            color_k: results.k,
+        })
+    }
+
+    getRgbToHex = (r, g, b) => {
+        return this.componentToHex(r) + this.componentToHex(g) + this.componentToHex(b);
+    };
+    componentToHex = (c) => {
+        let hex = c.toString(16);
+        return hex.length === 1 ? "0" + hex : hex;
+    };
+    getRgbToCmyk = (r, g, b, normalized) => {
+        let c = 1 - (r / 255);
+        let m = 1 - (g / 255);
+        let y = 1 - (b / 255);
+        let k = Math.min(c, Math.min(m, y));
+        c = (c - k) / (1 - k);
+        m = (m - k) / (1 - k);
+        y = (y - k) / (1 - k);
+
+        c = isNaN(c) ? 0 : 100 * c;
+        m = isNaN(m) ? 0 : 100 * m;
+        y = isNaN(y) ? 0 : 100 * y;
+        k = isNaN(k) ? 0 : 100 * k;
+        return {
+            c: c.toFixed(0),
+            m: m.toFixed(0),
+            y: y.toFixed(0),
+            k: k.toFixed(0)
         }
     };
 
+    handleChange = (color) => {
+        let results = this.getRgbToCmyk(color.rgb.r, color.rgb.g, color.rgb.b, true);
+        this.setState({ color: color.rgb });
+        this.setState({
+            color_hex: color.hex,
+            color_r: color.rgb.r,
+            color_g: color.rgb.g,
+            color_b: color.rgb.b,
+            color_c: results.c,
+            color_m: results.m,
+            color_y: results.y,
+            color_k: results.k,
+        })
+    };
     render() {
         let array = [];
         array = [1, 2, 3, 4,5 ,6 ,7, 8, 9, 10, 11, 12];
         return (
             <>
-                <div className="try-body">
+                <div className="try-body phone-icon-hide">
                     <div className="try-out justify-center">
                         <div className="txt-width txt-bold">try it out</div>
                     </div>
@@ -30,7 +99,7 @@ class Settings extends Component {
                             <div className="flex-grid grid31 pt-7 pr-7 pl-6">
                                 <div className="">
                                     <div className="mouse-cursor">
-                                        <img src={require('../assets/images/setting1.svg')} />
+                                        <img src={require('../assets/images/setting1.svg')} alt="" />
                                     </div>
                                     <div className="justify-left pt-3 txt-34 txt-regular">
                                         Click to Change Title
@@ -82,10 +151,11 @@ class Settings extends Component {
                                             </div>
                                         </div>
                                     </div>
-
                                     <div className="border-left">
                                         <div className="p-3 justify-left">CHAT</div>
-                                        <div className="chat-scroll">sdfdsdfddddddddddddddddddddddddddddddddddddddddddddddd</div>
+                                        <div className="chat-scroll">
+
+                                        </div>
                                         <div className="txt-position">
                                             <div className="txt-left pl-5">Your name</div>
                                             <div>
@@ -163,33 +233,61 @@ class Settings extends Component {
 
                                 <div className="hr-black">
                                     <div className="justify-left border-elliptic mt-5 pt-1 pb-1 ml-6 mr-10 txt-18">
-                                        <span className="gray-color">HEX #</span>140201
+                                        <span className="gray-color">HEX </span>
+                                        {
+                                            " " + this.state.color_hex.toUpperCase()
+                                        }
                                     </div>
                                     <div className="justify-center flex-grid grid2 pr-10 pl-6">
                                         <div className="justify-left border-elliptic mt-6 pt-1 txt-18">
-                                            <span className="gray-color">C #</span>100
+                                            <span className="gray-color">C %</span>
+                                            {
+                                                " " + this.state.color_c
+                                            }
                                         </div>
                                         <div className="justify-left border-elliptic mt-6 pt-1 txt-18">
-                                            <span className="gray-color">R </span>&nbsp;20
+                                            <span className="gray-color">R </span>
+                                            {
+                                                " " + this.state.color_r
+                                            }
                                         </div>
                                         <div className="justify-left border-elliptic mt-6 pt-1 txt-18">
-                                            <span className="gray-color">M #</span>100
+                                            <span className="gray-color">M %</span>
+                                            {
+                                                " " + this.state.color_m
+                                            }
                                         </div>
                                         <div className="justify-left border-elliptic mt-6 pt-1 txt-18">
-                                            <span className="gray-color">G </span>&nbsp;2
+                                            <span className="gray-color">G </span>
+                                            {
+                                                " " + this.state.color_g
+                                            }
                                         </div>
                                         <div className="justify-left border-elliptic mt-6 pt-1 txt-18">
-                                            <span className="gray-color">Y #</span>100
+                                            <span className="gray-color">Y %</span>
+                                            {
+                                                " " + this.state.color_y
+                                            }
                                         </div>
                                         <div className="justify-left border-elliptic mt-6 pt-1 txt-18">
-                                            <span className="gray-color">B </span>&nbsp;1
+                                            <span className="gray-color">B </span>
+                                            {
+                                                " " + this.state.color_b
+                                            }
                                         </div>
                                         <div className="justify-left border-elliptic mt-6 pt-1 txt-18">
-                                            <span className="gray-color">K #</span>100
+                                            <span className="gray-color">K %</span>
+                                            {
+                                                " " + this.state.color_k
+                                            }
                                         </div>
                                     </div>
-                                    <div className="mt-5 pl-2 pr-3">
-                                        <img src={require('../assets/images/color-settings.png')} alt="" />
+                                    <div className="mt-5 mb-5 pl-2 pr-3 justify-center">
+                                        <SketchPicker
+                                            color={ this.state.color }
+                                            onChange={ this.handleChange.bind(this) }
+                                            onClick={ this.handleChange.bind(this) }
+                                        />
                                     </div>
                                 </div>
                             </div>
