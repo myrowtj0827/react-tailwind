@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.92eb9d7a.chunk.css",
+    "main.css": "/static/css/main.6cd72a8f.chunk.css",
     "main.js": "/static/js/main.07c5d5e5.chunk.js",
     "main.js.map": "/static/js/main.07c5d5e5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2cc97e2e.js",
@@ -8,9 +8,9 @@
     "static/js/2.d14a4dd9.chunk.js": "/static/js/2.d14a4dd9.chunk.js",
     "static/js/2.d14a4dd9.chunk.js.map": "/static/js/2.d14a4dd9.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.53a33b8cb5e08e2bfa8cedf0aa2f5246.js": "/precache-manifest.53a33b8cb5e08e2bfa8cedf0aa2f5246.js",
+    "precache-manifest.4be3c224c6639b469bb1c15bd05df9a0.js": "/precache-manifest.4be3c224c6639b469bb1c15bd05df9a0.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.92eb9d7a.chunk.css.map": "/static/css/main.92eb9d7a.chunk.css.map",
+    "static/css/main.6cd72a8f.chunk.css.map": "/static/css/main.6cd72a8f.chunk.css.map",
     "static/js/2.d14a4dd9.chunk.js.LICENSE.txt": "/static/js/2.d14a4dd9.chunk.js.LICENSE.txt",
     "static/media/Mixily_LandingPage_Icon-01.svg": "/static/media/Mixily_LandingPage_Icon-01.9c66a389.svg",
     "static/media/Mixily_LandingPage_Icon-02.svg": "/static/media/Mixily_LandingPage_Icon-02.ddaaf0dd.svg",
@@ -39,7 +39,7 @@
   "entrypoints": [
     "static/js/runtime-main.2cc97e2e.js",
     "static/js/2.d14a4dd9.chunk.js",
-    "static/css/main.92eb9d7a.chunk.css",
+    "static/css/main.6cd72a8f.chunk.css",
     "static/js/main.07c5d5e5.chunk.js"
   ]
 }

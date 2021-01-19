@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.default.css';
-
+import Settings from "./settings";
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -20,21 +20,21 @@ class Home extends Component {
     render() {
         return (
             <>
-                <div className="pt-140 txt-weight-500">
-                    <div className="txt-90">Virtual Venue</div>
+                <div className="pt-140">
+                    <div className="txt-90 txt-medium">Virtual Venue</div>
                     <div className="txt-30">presented by Mixily</div>
                 </div>
                 <div className="pt-140 embed-width">
-                    <div className="txt-90 txt-weight-500">
+                    <div className="txt-90 txt-light">
                         Embed a custom-branded Virtual Venue right into your website
                     </div>
                 </div>
                 <div className="justify-center mouse-cursor pt-20">
-                    <div className="btn-sign">SIGN UP</div>
+                    <div className="btn-sign txt-semi-bold">SIGN UP</div>
                 </div>
                 <div className="pt-140 flex-justify">
                     <div className="text-width txt-30">
-                        <div className="txt-detail-width txt-weight-500">Virtual Venue</div>
+                        <div className="txt-detail-width">Virtual Venue</div>
                     </div>
                     <div className="img-width">
                         <img src={require('../assets/images/virtual-venue.svg')} className="" alt='Virtual Venue' />
@@ -43,7 +43,7 @@ class Home extends Component {
 
                 <div className="pt-140">
                     <div className="grid-body justify-cover">
-                        <div className="pb-8 txt-24 txt-left gray-color txt-weight-500">Click to expand examples</div>
+                        <div className="pb-8 txt-24 txt-left gray-color">Click to expand examples</div>
                         <div className="flex-grid grid3">
                             <div className="flex-left img-hover mouse-cursor">
                                 <img src={require('../assets/images/screen-image1.png')} className="" alt='' />
@@ -61,20 +61,20 @@ class Home extends Component {
                 {/*  Key Benefits  */}
                 <div className="pt-140">
                     <div className="key-benefits">
-                        <div className="txt-70 white-color txt-weight-500">Key Benefits</div>
+                        <div className="txt-70 white-color txt-bold">Key Benefits</div>
                         <div className="pt-20 white-color txt-26">
                             <div className="flex-grid grid4">
                                 <div className="">
                                     <div className="img-hover mouse-cursor">
                                         <img src={require('../assets/images/Mixily_LandingPage_KeyFeatures_A.png')} className="" alt='' />
                                     </div>
-                                    <div className="pt-6">Custom branding</div>
+                                    <div className="pt-6 txt-regular">Custom branding</div>
                                 </div>
                                 <div className="">
                                     <div className="img-hover mouse-cursor">
                                         <img src={require('../assets/images/Mixily_LandingPage_KeyFeatures_B.png')} className="" alt='' />
                                     </div>
-                                    <div className="pt-6">
+                                    <div className="pt-6 txt-regular">
                                         A home for your events instead of a hard-to-find Zoom link
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ class Home extends Component {
                                     <div className="img-hover mouse-cursor">
                                         <img src={require('../assets/images/Mixily_LandingPage_KeyFeatures_C.png')} className="" alt='' />
                                     </div>
-                                    <div className="pt-6">
+                                    <div className="pt-6 txt-regular">
                                         Direct quests to other goods / services
                                     </div>
                                     <div className="pt-6 main-color txt-16 txt-width">
@@ -93,7 +93,7 @@ class Home extends Component {
                                     <div className="img-hover mouse-cursor">
                                         <img src={require('../assets/images/Mixily_LandingPage_KeyFeatures_D.png')} className="" alt='' />
                                     </div>
-                                    <div className="pt-6">
+                                    <div className="pt-6 txt-regular">
                                         Modes for video chat, webinar, and broadcast
                                     </div>
                                     <div className="coming-soon justify-center">
@@ -112,55 +112,55 @@ class Home extends Component {
                             <div className='justify-center'>
                                 <img src={require('../assets/images/Mixily_LandingPage_Icon-01.svg')} className="" alt="" />
                             </div>
-                            <div className="pt-2 icon-txt">Audio and video chat up to 200 participants</div>
+                            <div className="pt-2 icon-txt txt-semi-bold">Audio and video chat up to 200 participants</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
                                 <img src={require('../assets/images/Mixily_LandingPage_Icon-02.svg')} alt="" />
                             </div>
-                            <div className="pt-2 icon-txt">Text chat with images, reactions, and moderators</div>
+                            <div className="pt-2 icon-txt txt-semi-bold">Text chat with images, reactions, and moderators</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
                                 <img src={require('../assets/images/Mixily_LandingPage_Icon-03.svg')} alt="" />
                             </div>
-                            <div className="pt-2 icon-txt">Screen sharing</div>
+                            <div className="pt-2 icon-txt txt-semi-bold">Screen sharing</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
                                 <img src={require('../assets/images/Mixily_LandingPage_Icon-04.svg')} alt="" />
                             </div>
-                            <div className="pt-2 icon-txt">Breakout rooms</div>
+                            <div className="pt-2 icon-txt txt-semi-bold">Breakout rooms</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
                                 <img src={require('../assets/images/Mixily_LandingPage_Icon-19.svg')} alt="" />
                             </div>
-                            <div className="pt-2 icon-txt">Speaker view + grid view</div>
+                            <div className="pt-2 icon-txt txt-semi-bold">Speaker view + grid view</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
                                 <img src={require('../assets/images/Mixily_LandingPage_Icon-07.svg')} alt="" />
                             </div>
-                            <div className="pt-2 icon-txt">Livestream broadcasting</div>
+                            <div className="pt-2 icon-txt txt-semi-bold">Livestream broadcasting</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
                                 <img src={require('../assets/images/Mixily_LandingPage_Icon-08.svg')} alt="" />
                             </div>
-                            <div className="pt-2 icon-txt">Guests can join without accounts</div>
+                            <div className="pt-2 icon-txt txt-semi-bold">Guests can join without accounts</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
                                 <img src={require('../assets/images/Mixily_LandingPage_Icon-09.svg')} alt="" />
                             </div>
-                            <div className="pt-2 icon-txt">Guests can join without plug-ins or apps</div>
+                            <div className="pt-2 icon-txt txt-semi-bold">Guests can join without plug-ins or apps</div>
                         </div>
                         <div className="icons-top">
                             <div className='justify-center'>
                                 <img src={require('../assets/images/Mixily_LandingPage_Icon-10.svg')} alt="" />
                             </div>
-                            <div className="pt-2 icon-txt">Stellar customer support</div>
+                            <div className="pt-2 icon-txt txt-semi-bold">Stellar customer support</div>
                         </div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@ class Home extends Component {
                             <div className="">
                                 "I started 2021 super stressed out about organizing my events, and now I'm excited and relieved!"
                             </div>
-                            <div className="pt-20 txt-28">
+                            <div className="pt-20 txt-28 txt-medium">
                                 <div>Marisa LaValette</div>
                                 <div>Founder of Attune + Align</div>
                             </div>
@@ -181,7 +181,7 @@ class Home extends Component {
                             <div className="">
                                 "I started 2021 super stressed out about organizing my events, and now I'm excited and relieved!"
                             </div>
-                            <div className="pt-20 txt-28">
+                            <div className="pt-20 txt-28 txt-medium">
                                 <div>Marisa LaValette</div>
                                 <div>Founder of Attune + Align</div>
                             </div>
@@ -190,7 +190,7 @@ class Home extends Component {
                             <div className="">
                                 "I started 2021 super stressed out about organizing my events, and now I'm excited and relieved!"
                             </div>
-                            <div className="pt-20 txt-28">
+                            <div className="pt-20 txt-28 txt-medium">
                                 <div>Marisa LaValette</div>
                                 <div>Founder of Attune + Align</div>
                             </div>
@@ -202,39 +202,39 @@ class Home extends Component {
                 <div className="who-body">
                     <div className="flex-grid grid24">
                         <div className="">
-                            <div className="pt-20 txt-54 gray-color">Who loves us</div>
+                            <div className="pt-20 txt-54 gray-color txt-semi-bold">Who loves us</div>
                             <div className="pt-5 flex-grid grid2 txt-26">
-                                <div className="pt-20">
+                                <div className="pt-20 txt-bold">
                                     <div className="justify-center">
                                         <img src={require('../assets/images/Mixily_LandingPage_Icon-11.png')} className="icon-loves" alt="" />
                                     </div>
                                     <div>Performing Arts</div>
                                 </div>
-                                <div className="pt-20">
+                                <div className="pt-20 txt-bold">
                                     <div className="justify-center">
                                         <img src={require('../assets/images/Mixily_LandingPage_Icon-14.png')} className="icon-loves" alt="" />
                                     </div>
                                     <div>Classes</div>
                                 </div>
-                                <div className="pt-20">
+                                <div className="pt-20 txt-bold">
                                     <div className="justify-center">
                                         <img src={require('../assets/images/Mixily_LandingPage_Icon-12.png')} className="icon-loves" alt="" />
                                     </div>
                                     <div>Exclusives</div>
                                 </div>
-                                <div className="pt-20">
+                                <div className="pt-20 txt-bold">
                                     <div className="justify-center">
                                         <img src={require('../assets/images/Mixily_LandingPage_Icon-15.png')} className="icon-loves" alt="" />
                                     </div>
                                     <div>Readings</div>
                                 </div>
-                                <div className="pt-20">
+                                <div className="pt-20 txt-bold">
                                     <div className="justify-center">
                                         <img src={require('../assets/images/Mixily_LandingPage_Icon-13.png')} className="icon-loves" alt="" />
                                     </div>
                                     <div>Social Clubs</div>
                                 </div>
-                                <div className="pt-20">
+                                <div className="pt-20 txt-bold">
                                     <div className="justify-center">
                                         <img src={require('../assets/images/Mixily_LandingPage_Icon-16.png')} className="icon-loves" alt="" />
                                     </div>
@@ -249,28 +249,14 @@ class Home extends Component {
                 </div>
 
                 {/*  Try it out  */}
-                <div className="try-body">
-                    <div className="try-out justify-center">
-                        <div className="txt-width">try it out</div>
-                    </div>
-                    <div className="pt-7 flex-left txt-weight-500">
-                        <div className="btn-light-design">default light design</div>
-                        <div className="btn-dark-design">default light design</div>
-                        <div className="btn-dark-design">saved customization</div>
-                    </div>
-                    <div>
-                    </div>
-                    <div className="pt-5 flex-left txt-20 grey-color">
-                        *Width condensed for formatting view
-                    </div>
-                </div>
+                <Settings />
 
                 {/*  Individual, Community, Enterprise  */}
                 <div className="flex-grid grid30 white-color">
                     <div className="individual">
-                        <div className="flex txt-54 pb-5">Individual</div>
+                        <div className="flex txt-54 pb-5 txt-semi-bold">Individual</div>
                         <div className="btn-white-border">
-                            <div className="flex free">Free</div>
+                            <div className="flex free txt-semi-bold">Free</div>
                         </div>
                         <div className="pt-10 txt-left">
                             <div>• Virtual Venue</div>
@@ -292,12 +278,12 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="pt-20">
-                            <div className="btn-sign btn-p mouse-cursor">SIGN UP</div>
+                            <div className="btn-sign btn-p txt-semi-bold mouse-cursor">SIGN UP</div>
                         </div>
                     </div>
                     <div className="community">
-                        <div className="flex txt-54 pb-5">Community</div>
-                        <div className="btn-white-border">
+                        <div className="flex txt-54 pb-5 txt-semi-bold">Community</div>
+                        <div className="btn-white-border txt-semi-bold">
                             <div className="flex">$30/mo, ~$290/yr</div>
                             <div className="flex txt-16">Early beta discounted rate $25/month</div>
                         </div>
@@ -317,13 +303,13 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="pt-20">
-                            <div className="btn-sign btn-p mouse-cursor">SIGN UP</div>
+                            <div className="btn-sign btn-p txt-semi-bold mouse-cursor">SIGN UP</div>
                         </div>
                     </div>
                     <div className="enterprise">
-                        <div className="flex txt-54 pb-5">Enterprise</div>
+                        <div className="flex txt-54 pb-5 txt-semi-bold">Enterprise</div>
                         <div className="btn-white-border">
-                            <div className="flex custom">Custom</div>
+                            <div className="flex custom txt-semi-bold">Custom</div>
                         </div>
                         <div className="pt-10 txt-left">
                             <div>• Virtual Venue</div>
@@ -340,7 +326,7 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="pt-20">
-                            <div className="btn-sign btn-p mouse-cursor">CONTACT</div>
+                            <div className="btn-sign btn-p txt-semi-bold mouse-cursor">CONTACT</div>
                         </div>
                     </div>
                 </div>
@@ -409,7 +395,7 @@ class Home extends Component {
                     </div>
                 </div>
                 <div className="justify-center mouse-cursor pt-40">
-                    <div className="btn-footer">SIGN UP</div>
+                    <div className="btn-footer txt-semi-bold">SIGN UP</div>
                 </div>
                 {/*  Footer  */}
                 <div className="pt-20 bg-footer">

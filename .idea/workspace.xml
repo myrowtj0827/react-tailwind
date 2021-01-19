@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -135,7 +135,7 @@
       <workItem from="1597298971096" duration="2364000" />
       <workItem from="1597346597462" duration="59000" />
       <workItem from="1610845498858" duration="9212000" />
-      <workItem from="1610939566540" duration="49363000" />
+      <workItem from="1610939566540" duration="70934000" />
     </task>
     <servers />
   </component>
@@ -151,10 +151,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="864" y="277" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1610994737620" />
-    <state x="417" y="157" width="1018" height="720" key="dock-window-1" timestamp="1610979290276">
+    <state x="417" y="157" width="1018" height="720" key="dock-window-1" timestamp="1611020805234">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="417" y="157" width="1018" height="720" key="dock-window-1/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1610979290276" />
+    <state x="417" y="157" width="1018" height="720" key="dock-window-1/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1611020805234" />
     <state x="705" y="246" key="run.anything.popup" timestamp="1610984806359">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

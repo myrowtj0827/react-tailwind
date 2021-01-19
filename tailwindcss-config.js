@@ -21,7 +21,8 @@ module.exports = {
       const default_option = {
         '*': {
           boxSizing: 'border-box',
-          fontFamily: 'Poppins, sans-serif',
+          fontFamily: 'Inter',
+          fontWeight: '500',
           transition: 'all .3s ease-out',
           fontSize: 'inherit',
         },
@@ -89,12 +90,24 @@ module.exports = {
           gridTemplateColumns: '1fr 1fr',
           gridColumnGap: '25px',
         },
+        '.grid20': {
+          gridTemplateColumns: '4.5fr 1fr',
+          gridColumnGap: '100px',
+        },
         '.grid3': {
           gridTemplateColumns: '1fr 1fr 1fr',
           gridColumnGap: '50px',
         },
+        '.grid-title-change': {
+          gridTemplateColumns: '1fr 1fr 1fr',
+          gridColumnGap: '10px',
+          gridRowGap: '10px',
+        },
         '.grid30': {
           gridTemplateColumns: '1fr 1fr 1fr',
+        },
+        '.grid31': {
+          gridTemplateColumns: '3fr 1fr',
         },
         '.grid4': {
           gridTemplateColumns: '1fr 1fr 1fr 1fr',
@@ -148,13 +161,16 @@ module.exports = {
       //font-family, font size, color
       const style_txt = {
         '.txt-medium': {
-          fontWeight: 'Medium',
+          fontWeight: '500',
         },
         '.txt-light': {
-          fontWeight: 'Light',
+          fontWeight: '300',
         },
-        '.txt-semi': {
-          fontWeight: 'SemiBold',
+        '.txt-regular': {
+          fontWeight: '400',
+        },
+        '.txt-semi-bold': {
+          fontWeight: '600',
         },
         '.txt-italic': {
           fontWeight: 'Italic',
@@ -163,7 +179,7 @@ module.exports = {
           fontWeight: 'MediumItalic',
         },
         '.txt-bold': {
-          fontWeight: 'bold',
+          fontWeight: '700',
         },
         '.txt-weight-500': {
           fontWeight: '500',
@@ -206,8 +222,14 @@ module.exports = {
         '.txt-20': {
           fontSize: '20px',
         },
+        '.txt-18': {
+          fontSize: '18px',
+        },
         '.txt-16': {
           fontSize: '16px',
+        },
+        '.txt-14': {
+          fontSize: '14px',
         },
         // color
         '.main-color': {
@@ -251,6 +273,7 @@ module.exports = {
           color: 'var(--white)',
           transition: 'all .15s linear',
           '&:hover': {
+            borderRadius: '50px',
             backgroundColor: 'var(--white)',
             color: 'var(--main-color)',
           },
@@ -268,7 +291,21 @@ module.exports = {
           borderRadius: '50px',
           padding: '10px 50px 10px 10px',
           fontSize: '20px',
-        }
+          '&:hover': {
+            border: '1px solid var(--main-color)',
+            color: 'var(--white)',
+            backgroundColor: 'var(--main-color)',
+          },
+        },
+        '.btn-border-black': {
+          padding: '10px',
+          border: '3px solid var(--black)',
+          '&:hover': {
+            borderRadius: '30px',
+            backgroundColor: 'var(--black)',
+            color: 'var(--white)',
+          },
+        },
       };
       addComponents(buttons);
 
@@ -308,7 +345,7 @@ module.exports = {
         },
         '.img-hover': {
           '&:hover': {
-            transform: 'scale(1.1)',
+            transform: 'scale(1.05)',
             opacity: '0.5',
           },
         },
@@ -376,6 +413,10 @@ module.exports = {
           lineHeight: '1.1',
           color: 'var(--white)',
           backgroundColor: 'var(--grid3-color)',
+          '&:hover': {
+            transform: 'scale(1.05)',
+            backgroundColor: 'var(--main-color)',
+          }
         },
         '.individual': {
           backgroundColor: 'var(--grid1-color)',
@@ -462,6 +503,7 @@ module.exports = {
           color: 'var(--white)',
           transition: 'all .15s linear',
           '&:hover': {
+            borderRadius: '80px',
             backgroundColor: 'var(--white)',
             color: 'var(--main-color)',
           },
@@ -470,6 +512,49 @@ module.exports = {
           '&:hover': {
             color: 'var(--grid1-color)',
           },
+        },
+        /**
+         * Settings component
+         */
+        '.div-border': {
+          border: '1px solid black',
+        },
+        '.justify-left': {
+          display: 'flex',
+          justifyContent: 'left',
+        },
+        '.hr-black': {
+          borderTop: '1px solid var(--black) !important',
+        },
+        '.border-elliptic': {
+          padding: '0 0 0 10px',
+          border: '1px solid var(--black)',
+          borderRadius: '20px',
+        },
+        '.border-left': {
+          position: 'relative',
+          borderLeft: '1px solid var(--black)',
+        },
+        '.txt-position': {
+          position: 'absolute',
+          bottom: '10px',
+          margin: '0 auto',
+          width: '100%',
+          maxWidth: '100%',
+        },
+        'textarea': {
+          padding: '10px',
+          border: '1px solid var(--grid1-color)',
+          borderRadius: '10px',
+          minHeight: '60px',
+          outline: 'none',
+          width: '90%',
+          maxWidth: '100%',
+        },
+        '.chat-scroll': {
+          overflowY: 'auto',
+          maxHeight: '70vh',
+          wordBreak: 'break-all',
         }
       };
       addComponents(custom);
