@@ -4,14 +4,7 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      /**
-       * Color
-       */
-      colors: {
-
-      }
-    },
+    extend: {},
   },
   variants: {
     extend: {},
@@ -93,6 +86,7 @@ module.exports = {
         '.grid20': {
           gridTemplateColumns: '4.5fr 1fr',
           gridColumnGap: '100px',
+          gridAutoRows: 'auto',
         },
         '.grid3': {
           gridTemplateColumns: '1fr 1fr 1fr',
@@ -176,7 +170,6 @@ module.exports = {
         },
         '.txt-34': {
           fontSize: '34px',
-          minHeight: '120px',
         },
         '.txt-30': {
           fontSize: '30px',
@@ -269,7 +262,7 @@ module.exports = {
           },
         },
         '.btn-border-black': {
-          padding: '10px',
+          padding: '0 10px',
           border: '3px solid var(--black)',
           '&:hover': {
             borderRadius: '30px',
@@ -281,6 +274,18 @@ module.exports = {
       addComponents(buttons);
 
       const custom = {
+        '.input-width': {
+          outline: 'none',
+        },
+        '.color-scroll': {
+          overflowY: 'scroll',
+          maxHeight: '70vh',
+          minHeight: '60px',
+          wordBreak: 'break-all',
+        },
+        '.header-p': {
+          padding: '25px',
+        },
         '.pt-140': {
           paddingTop: '140px',
         },
@@ -354,7 +359,9 @@ module.exports = {
           paddingBottom: '50px',
         },
         '.icon-txt': {
+          margin: '0 auto',
           width: '90%',
+          textAlign: 'center',
         },
         '.bg-middle': {
           padding: '130px 130px 140px',
@@ -401,7 +408,6 @@ module.exports = {
         '.individual, .community, .enterprise': {
           position: 'relative',
           padding: '100px 70px',
-          height: 'auto',
           fontSize: '24px',
         },
         '.btn-p': {
@@ -523,7 +529,7 @@ module.exports = {
         },
         '.chat-scroll': {
           overflowY: 'auto',
-          maxHeight: '70vh',
+          maxHeight: '72vh',
           wordBreak: 'break-all',
         },
 
@@ -559,6 +565,7 @@ module.exports = {
         '.hidden1200': {
           display: 'block'
         },
+
         /**
          * Slider Customizing
          */
@@ -584,51 +591,11 @@ module.exports = {
           justifyContent: 'center',
           alignItems: 'center',
         },
-        '.owl-carousel .owl-item img': {
-          margin: '20px auto',
-          width: '80px !important',
-          textAlign: 'center !important',
+        '.sign-contact-show': {
+          display: 'none',
         },
-        '.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span': {
-          background: '#808080 !important',
-        },
-        '.owl-theme .owl-dots .owl-dot span': {
-          display: 'block !important',
-          position: 'relative',
-          margin: '-30px 10px 0',
-          outline: 'none !important',
-        },
-        '.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev': {
-          position: 'absolute',
-          marginTop: '0',
-          border: 'none',
-          paddingTop: '15px',
-          width: '40px',
-          fontSize: '40px !important',
-          color: 'inherit',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-        },
-        '.owl-carousel .owl-nav button.owl-prev': {
-          display: 'none !important',
-          top: '50%',
-          transform: 'translateY(-120%)',
-          left: '-15px',
-        },
-        '.owl-carousel .owl-nav button.owl-next': {
-          display: 'none !important',
-          top: '50%',
-          transform: 'translateY(-120%)',
-          right: '-15px',
-        },
-        '.owl-theme .owl-dots .owl-dot': {
-          outline: 'none !important',
-        },
-        '.owl-dots, .owl-nav': {
-          display: 'flex',
-          margin: '0 !important',
-          textAlign: '0 !important',
-          justifyContent: 'center',
+        '.sign-contact-hidden': {
+          display: 'block',
         },
       };
       addComponents(custom);
@@ -651,9 +618,6 @@ module.exports = {
             '.txt-60': {
               fontSize: '48px !important',
             },
-            '.txt-54': {
-              fontSize: '42px !important',
-            },
             '.txt-40': {
               fontSize: '32px !important',
             },
@@ -667,7 +631,7 @@ module.exports = {
               fontSize: '24px !important',
             },
             '.btn-sign': {
-              fontSize: '40px !important',
+              fontSize: '50px !important',
             },
             '.grid4': {
               gridColumnGap: '30px !important',
@@ -706,11 +670,30 @@ module.exports = {
               maxWidth: '30% !important',
               minHeight: '100px !important'
             },
+            '.btn-sign.btn-p': {
+              padding: '10px !important',
+              minWidth: '70% !important',
+            },
+            '.try-body': {
+              padding: '200px 40px 120px !important',
+            },
+            '.grid20': {
+              gridColumnGap: '30px !important',
+            },
           }
         },
 
         {
           '@media (max-width: 1200px)': {
+            '.txt-34.txt-regular': {
+              fontSize: '24px !important',
+            },
+            '.flex-grid.grid2.hex': {
+              gridTemplateColumns: '1fr 1fr !important',
+            },
+            '.chat-scroll': {
+              maxHeight: '60vh',
+            },
             '.embed-width': {
               maxWidth: '80% !important',
             },
@@ -764,11 +747,62 @@ module.exports = {
             '.phone-p': {
               paddingTop: '130px !important',
             },
+            /**
+             * Slick
+             */
+            '.slick-dots li button:before': {
+              fontSize: '15px !important',
+            },
+            '.slider-show': {
+              display: 'block !important',
+            },
+            '.slider-hidden': {
+              display: 'none !important',
+            },
+            '.slick-dots': {
+              bottom: '-45px !important',
+            },
+            '.btn-sign.btn-p': {
+              minWidth: '80% !important',
+            },
+            '.individual, .community, .enterprise': {
+              padding: '100px 30px !important',
+            },
           }
         },
 
         {
           '@media (max-width: 992px)': {
+            '.try-body': {
+              padding: '200px 15px 120px !important',
+            },
+            '.btn-light-design, .btn-dark-design': {
+              padding: '10px 20px !important',
+            },
+            '.header-p': {
+              padding: '15px !important',
+            },
+            '.grid-title-change': {
+              gridTemplateColumns: '1fr 1fr !important',
+            },
+            '.mt-6': {
+              marginTop: '15px !important',
+            },
+            '.txt-34.txt-regular': {
+              fontSize: '20px !important',
+            },
+            '.txt-54': {
+              fontSize: '40px !important',
+            },
+            '.individual, .community, .enterprise': {
+              padding: '100px 15px !important',
+              fontSize: '18px !important',
+            },
+            '.btn-sign.btn-p': {
+              height: '80px !important',
+              minWidth: '60% !important',
+              fontSize: '35px !important',
+            },
             '.pt-140': {
               paddingTop: '110px !important',
             },
@@ -780,9 +814,6 @@ module.exports = {
             },
             '.grid3.icons': {
               gridTemplateColumns: '1fr 1fr !important',
-            },
-            '.phone-icon-hide': {
-              display: 'none',
             },
             '.phone-icon-show': {
               display: 'block',
@@ -805,6 +836,40 @@ module.exports = {
 
         {
           '@media (max-width: 768px)': {
+            '.phone-icon-hide': {
+              display: 'none',
+            },
+            '.sign-contact-show > div > div.slick-list > div.slick-track': {
+              backgroundColor: 'var(--grid2-color) !important',
+            },
+            '.sign-contact-show': {
+              display: 'block !important',
+            },
+            '.sign-contact-hidden': {
+              display: 'none !important',
+            },
+            '.individual, .community, .enterprise': {
+              padding: '70px 60px 150px !important',
+              height: 'auto !important',
+              color: 'var(--white)',
+              backgroundColor: 'var(--grid2-color) !important',
+              fontSize: '28px !important',
+            },
+            '.btn-sign.btn-p': {
+              bottom: '150px !important',
+              height: '100px !important',
+              minWidth: '50% !important',
+              fontSize: '50px !important',
+            },
+            '.sign-contact-show > div > ul.slick-dots': {
+              bottom: '65px !important',
+              'li.slick-active button:before': {
+                color: '#fff !important',
+              },
+              'li button:before': {
+                color: '#fff !important',
+              }
+            },
             '.txt-90': {
               fontSize: '60px !important',
             },
@@ -818,7 +883,7 @@ module.exports = {
               fontSize: '42px !important',
             },
             '.txt-54': {
-              fontSize: '38px !important',
+              fontSize: '54px !important',
             },
             '.txt-40': {
               fontSize: '30px !important',
@@ -843,7 +908,7 @@ module.exports = {
             },
             '.btn-sign': {
               padding: '7px 30px !important',
-              fontSize: '35px !important',
+              fontSize: '45px !important',
             },
             '.pt-140': {
               paddingTop: '100px !important',
@@ -851,11 +916,8 @@ module.exports = {
             '.img-width': {
               padding: '0 20px !important',
             },
-            '.slider-show': {
-              display: 'block !important',
-            },
-            '.slider-hidden': {
-              display: 'none !important',
+            '.expand': {
+              textAlign: 'center',
             },
             '.grid3': {
               gridTemplateColumns: '1fr !important',
@@ -917,11 +979,17 @@ module.exports = {
               width: '100% !important',
               maxWidth: '130px !important',
             },
+            '.slick-dots': {
+              bottom: '-30px !important',
+            }
           }
         },
 
         {
           '@media (max-width: 600px)': {
+            '.btn-p': {
+              height: '80px !important',
+            },
             '.pt-140': {
               paddingTop: '70px !important',
             },
@@ -937,9 +1005,6 @@ module.exports = {
             '.txt-60': {
               fontSize: '34px !important',
             },
-            '.txt-54': {
-              fontSize: '30px !important',
-            },
             '.txt-40': {
               fontSize: '24px !important',
             },
@@ -949,7 +1014,10 @@ module.exports = {
             '.btn-sign': {
               borderRadius: '10px !important',
               padding: '5px 20px !important',
-              fontSize: '25px !important',
+              fontSize: '45px !important',
+              '&:hover': {
+                borderRadius: '50px !important',
+              },
             },
             '.txt-30': {
               fontSize: '20px !important',
@@ -996,6 +1064,16 @@ module.exports = {
 
         {
           '@media (max-width: 480px)': {
+            '.individual, .community, .enterprise': {
+              padding: '70px 30px 130px !important',
+              minWidth: '320px !important',
+              fontSize: '20px !important',
+            },
+            '.btn-sign.btn-p': {
+              bottom: '130px !important',
+              height: '80px !important',
+              fontSize: '35px !important',
+            },
             '.txt-90': {
               fontSize: '40px !important',
             },
@@ -1009,11 +1087,11 @@ module.exports = {
               fontSize: '30px !important',
             },
             '.txt-54': {
-              fontSize: '26px !important',
+              fontSize: '48px !important',
             },
             '.btn-sign': {
               padding: '3px 15px !important',
-              fontSize: '22px !important',
+              fontSize: '40px !important',
             },
             '.txt-34': {
               fontSize: '18px !important',
@@ -1052,6 +1130,15 @@ module.exports = {
             },
           }
         },
+
+        {
+          '@media (max-width: 360px)': {
+            '.individual, .community, .enterprise': {
+              padding: '70px 30px 130px !important',
+              minWidth: '320px !important',
+            },
+          }
+        }
       ]);
     }),
   ],

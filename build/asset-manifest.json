@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.7e209b80.chunk.css",
-    "main.js": "/static/js/main.32b46c69.chunk.js",
-    "main.js.map": "/static/js/main.32b46c69.chunk.js.map",
+    "main.css": "/static/css/main.9f598539.chunk.css",
+    "main.js": "/static/js/main.1c88360d.chunk.js",
+    "main.js.map": "/static/js/main.1c88360d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2cc97e2e.js",
     "runtime-main.js.map": "/static/js/runtime-main.2cc97e2e.js.map",
-    "static/js/2.fd787e1e.chunk.js": "/static/js/2.fd787e1e.chunk.js",
-    "static/js/2.fd787e1e.chunk.js.map": "/static/js/2.fd787e1e.chunk.js.map",
+    "static/js/2.2793fefa.chunk.js": "/static/js/2.2793fefa.chunk.js",
+    "static/js/2.2793fefa.chunk.js.map": "/static/js/2.2793fefa.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d4e8ce6748af55838c1f50a8e376b2ad.js": "/precache-manifest.d4e8ce6748af55838c1f50a8e376b2ad.js",
+    "precache-manifest.2b9ed8cd1598edabf42e09e7bde0a3cc.js": "/precache-manifest.2b9ed8cd1598edabf42e09e7bde0a3cc.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.7e209b80.chunk.css.map": "/static/css/main.7e209b80.chunk.css.map",
-    "static/js/2.fd787e1e.chunk.js.LICENSE.txt": "/static/js/2.fd787e1e.chunk.js.LICENSE.txt",
+    "static/css/main.9f598539.chunk.css.map": "/static/css/main.9f598539.chunk.css.map",
+    "static/js/2.2793fefa.chunk.js.LICENSE.txt": "/static/js/2.2793fefa.chunk.js.LICENSE.txt",
     "static/media/Mixily_LandingPage_Icon-01.svg": "/static/media/Mixily_LandingPage_Icon-01.9c66a389.svg",
     "static/media/Mixily_LandingPage_Icon-02.svg": "/static/media/Mixily_LandingPage_Icon-02.ddaaf0dd.svg",
     "static/media/Mixily_LandingPage_Icon-03.svg": "/static/media/Mixily_LandingPage_Icon-03.7d684e34.svg",
@@ -26,6 +26,7 @@
     "static/media/Mixily_LandingPage_KeyFeatures_B.png": "/static/media/Mixily_LandingPage_KeyFeatures_B.249d0606.png",
     "static/media/Mixily_LandingPage_KeyFeatures_C.png": "/static/media/Mixily_LandingPage_KeyFeatures_C.cbe93a77.png",
     "static/media/Mixily_LandingPage_KeyFeatures_D.png": "/static/media/Mixily_LandingPage_KeyFeatures_D.ea662aa2.png",
+    "static/media/down.svg": "/static/media/down.f230ac7f.svg",
     "static/media/elliptic-black.svg": "/static/media/elliptic-black.86febe32.svg",
     "static/media/elliptic-white.svg": "/static/media/elliptic-white.860f5c88.svg",
     "static/media/output.css": "/static/media/footer-bg.f0316fe9.png",
@@ -44,12 +45,13 @@
     "static/media/setting4.svg": "/static/media/setting4.2ea95eed.svg",
     "static/media/setting5.svg": "/static/media/setting5.fded3269.svg",
     "static/media/setting6.svg": "/static/media/setting6.b78127ac.svg",
+    "static/media/up.svg": "/static/media/up.3b03b2d7.svg",
     "static/media/virtual-venue.svg": "/static/media/virtual-venue.2abebffe.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2cc97e2e.js",
-    "static/js/2.fd787e1e.chunk.js",
-    "static/css/main.7e209b80.chunk.css",
-    "static/js/main.32b46c69.chunk.js"
+    "static/js/2.2793fefa.chunk.js",
+    "static/css/main.9f598539.chunk.css",
+    "static/js/main.1c88360d.chunk.js"
   ]
 }

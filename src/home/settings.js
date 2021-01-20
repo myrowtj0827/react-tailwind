@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { SketchPicker } from 'react-color';
 class Settings extends Component {
     constructor(props) {
@@ -22,6 +20,7 @@ class Settings extends Component {
             color_m: '',
             color_y: '',
             color_k: '',
+            height_scroll: '',
         }
     };
     componentDidMount() {
@@ -80,6 +79,35 @@ class Settings extends Component {
             color_k: results.k,
         })
     };
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleResize.bind(this));
+        this.handleResize();
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize.bind(this));
+    }
+    handleResize = () => {
+        if (window.innerWidth >= 1200) {
+            this.setState({
+                height_scroll: window.innerWidth,
+            })
+        } else if (window.innerWidth < 1200 && window.innerWidth >= 768) {
+            this.setState({
+                height_scroll: 'calc(40vw - 50px)',
+            })
+        } else if (window.innerWidth < 768) {
+            this.setState({
+                height_scroll: '100%',
+           })
+        }
+    };
+
+    onClick = () => {
+        this.setState({
+            flag: !this.state.flag,
+        });
+    };
     render() {
         let array = [];
         array = [1, 2, 3, 4,5 ,6 ,7, 8, 9, 10, 11, 12];
@@ -95,74 +123,75 @@ class Settings extends Component {
                         <div className="btn-dark-design mouse-cursor">saved customization</div>
                     </div>
                     <div className="flex-grid grid20 pt-7">
-                        <div className="div-border">
-                            <div className="flex-grid grid31 pt-7 pr-7 pl-6">
-                                <div className="">
-                                    <div className="mouse-cursor">
-                                        <img src={require('../assets/images/setting1.svg')} alt="" />
-                                    </div>
-                                    <div className="justify-left pt-3 txt-34 txt-regular">
-                                        Click to Change Title
-                                    </div>
-                                </div>
-                                <div className="justify-center btn-border-black mouse-cursor txt-24 txt-regular mb-7 ml-7">
-                                    CLICK TO ADD LOGO
-                                </div>
-                            </div>
-                            <div className="hr-black">
-                                <div className="flex-grid grid31">
+                        <div className="">
+                            <div className="div-border">
+                                <div className="flex-justify header-p">
                                     <div className="">
-                                        <div className="p-5 flex-grid grid-title-change">
-                                            {
-                                                Object.keys(array).map((item, key) => {
-                                                    return (
-                                                        <div key={key} className="img-hover mouse-cursor">
-                                                            <img src={require('../assets/images/title-image.png')} alt="" />
-                                                        </div>
-                                                    )
-                                                })
-                                            }
+                                        <div className="mouse-cursor">
+                                            <img src={require('../assets/images/setting1.svg')} alt="" />
                                         </div>
-                                        <div className="hr-black p-7">
-                                            <div className="flex-justify">
-                                                <div className="txt-left">
-                                                    <div className="flex">
-                                                        <div className="justify-center mouse-cursor">
-                                                            <img src={require('../assets/images/setting2.svg')} alt="" />
-                                                        </div>
-                                                        <div className="justify-center pl-10 mouse-cursor">
-                                                            <img src={require('../assets/images/setting3.svg')} alt="" />
+                                        <div className="justify-left pt-3 txt-34 txt-regular">
+                                            Click to Change Title
+                                        </div>
+                                    </div>
+                                    <div className="justify-center btn-border-black mouse-cursor txt-24 txt-regular">
+                                        CLICK TO ADD LOGO
+                                    </div>
+                                </div>
+                                <div className="hr-black">
+                                    <div className="flex-grid grid31">
+                                        <div className="">
+                                            <div className="p-5 flex-grid grid-title-change">
+                                                {
+                                                    Object.keys(array).map((item, key) => {
+                                                        return (
+                                                            <div key={key} className="img-hover mouse-cursor">
+                                                                <img src={require('../assets/images/title-image.png')} alt="" />
+                                                            </div>
+                                                        )
+                                                    })
+                                                }
+                                            </div>
+                                            <div className="hr-black p-7">
+                                                <div className="flex-justify">
+                                                    <div className="txt-left">
+                                                        <div className="flex">
+                                                            <div className="justify-center mouse-cursor">
+                                                                <img src={require('../assets/images/setting2.svg')} alt="" />
+                                                            </div>
+                                                            <div className="justify-center pl-10 mouse-cursor">
+                                                                <img src={require('../assets/images/setting3.svg')} alt="" />
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div className="txt-right">
-                                                    <div className="flex">
-                                                        <div className="justify-center mouse-cursor">
-                                                            <img src={require('../assets/images/setting4.svg')} alt="" />
-                                                        </div>
-                                                        <div className="justify-center pl-10 mouse-cursor">
-                                                            <img src={require('../assets/images/setting5.svg')} alt="" />
-                                                        </div>
-                                                        <div className="justify-center pl-10 mouse-cursor">
-                                                            <img src={require('../assets/images/setting6.svg')} alt="" />
+                                                    <div className="txt-right">
+                                                        <div className="flex">
+                                                            <div className="justify-center mouse-cursor">
+                                                                <img src={require('../assets/images/setting4.svg')} alt="" />
+                                                            </div>
+                                                            <div className="justify-center pl-10 mouse-cursor">
+                                                                <img src={require('../assets/images/setting5.svg')} alt="" />
+                                                            </div>
+                                                            <div className="justify-center pl-10 mouse-cursor">
+                                                                <img src={require('../assets/images/setting6.svg')} alt="" />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="border-left">
-                                        <div className="p-3 justify-left">CHAT</div>
-                                        <div className="chat-scroll">
-
-                                        </div>
-                                        <div className="txt-position">
-                                            <div className="txt-left pl-5">Your name</div>
-                                            <div>
+                                        <div className="border-left">
+                                            <div className="p-3 justify-left">CHAT</div>
+                                            <div className="color-scroll">
+                                            </div>
+                                            <div className="txt-position">
+                                                <div className="txt-left pl-5">Your name</div>
+                                                <div>
                                                 <textarea
                                                     placeholder=""
                                                     className="ml-3"
                                                 />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -174,63 +203,99 @@ class Settings extends Component {
                             <div className="txt-left pb-5">
                                 Select multiple elements to bulk customize
                             </div>
-                            <div className="div-border txt-14">
+                            <div
+                                className={this.state.flag? "div-border txt-14 chat-scroll": "div-border txt-14"}
+                                 //style={{height: this.state.height_scroll}}
+                            >
                                 <div className="justify-left pl-6 pt-3 pb-3">
                                     <img src={require('../assets/images/elliptic-white.svg')} className="mr-3" alt="" />
                                     page background
                                 </div>
-                                <div className="hr-black pl-6">
-                                    <div className="justify-left pt-3">
-                                        <img src={require('../assets/images/elliptic-white.svg')} className="mr-3" alt="" />
-                                        background
-                                    </div>
-                                    <div className="justify-left pt-3">
-                                        <img src={require('../assets/images/elliptic-white.svg')} className="mr-3" alt="" />
-                                        right panel background
-                                    </div>
-                                    <div className="justify-left pt-3">
-                                        <div className="justify-left border-elliptic pr-2">
-                                            <img src={require('../assets/images/elliptic-black.svg')} className="mr-3" alt="" />
-                                            title text
-                                        </div>
-                                    </div>
-                                    <div className="justify-left pt-3">
-                                        <div className="justify-left border-elliptic pr-2">
-                                            <img src={require('../assets/images/elliptic-black.svg')} className="mr-3" alt="" />
-                                            right panel text
-                                        </div>
-                                    </div>
-                                    <div className="justify-left pt-3">
-                                        <div className="justify-left border-elliptic pr-2">
-                                            <img src={require('../assets/images/elliptic-black.svg')} className="mr-3" alt="" />
-                                            button fill
-                                        </div>
-                                    </div>
-                                    <div className="justify-left pt-3">
-                                        <div className="justify-left border-elliptic pr-2">
-                                            <img src={require('../assets/images/elliptic-black.svg')} className="mr-3" alt="" />
-                                            grid lines
-                                        </div>
-                                    </div>
-                                    <div className="justify-left pt-3">
-                                        <div className="justify-left pl-3">
-                                            <img src={require('../assets/images/scroll-bar.svg')} className="mr-3" alt="" />
-                                            scroll bar
-                                        </div>
-                                    </div>
-                                    <div className="justify-left pt-3">
-                                        <div className="justify-left pl-3">
-                                            <img src={require('../assets/images/scroll-background.svg')} className="mr-3" alt="" />
-                                            scroll bar background
-                                        </div>
-                                    </div>
-                                    <div className="justify-left pt-3 pb-3 mb-2">
-                                        <div className="justify-left border-elliptic pt-2 pb-2 pr-2">
-                                            upload background image
-                                        </div>
-                                    </div>
-                                </div>
 
+                                <div className="hr-black" style={{backgroundColor: '#0002'}}>
+                                    {
+                                        !this.state.flag?
+                                            <div
+                                                className="justify-center mouse-cursor"
+                                                onClick={this.onClick}
+                                            >
+                                                <div>
+                                                    <img src={require('../assets/images/down.svg')} alt="" />
+                                                </div>
+                                                <div className="pl-2">Show more</div>
+                                            </div>
+                                            :
+                                            <div
+                                                className="justify-center mouse-cursor"
+                                                onClick={this.onClick}
+                                            >
+                                                <div>
+                                                    <img src={require('../assets/images/up.svg')} alt="" />
+                                                </div>
+                                                <div className="pl-2">Less more</div>
+                                            </div>
+                                    }
+                                </div>
+                                {
+                                    this.state.flag ?
+                                        <div className="hr-black pl-6">
+                                            <div className="justify-left pt-3">
+                                                <img src={require('../assets/images/elliptic-white.svg')} className="mr-3" alt="" />
+                                                background
+                                            </div>
+                                            <div className="justify-left pt-3">
+                                                <img src={require('../assets/images/elliptic-white.svg')} className="mr-3" alt="" />
+                                                right panel background
+                                            </div>
+                                            <div className="justify-left pt-3">
+                                                <div className="justify-left border-elliptic pr-2">
+                                                    <img src={require('../assets/images/elliptic-black.svg')} className="mr-3" alt="" />
+                                                    title text
+                                                </div>
+                                            </div>
+                                            <div className="justify-left pt-3">
+                                                <div className="justify-left border-elliptic pr-2">
+                                                    <img src={require('../assets/images/elliptic-black.svg')} className="mr-3" alt="" />
+                                                    right panel text
+                                                </div>
+                                            </div>
+                                            <div className="justify-left pt-3">
+                                                <div className="justify-left border-elliptic pr-2">
+                                                    <img src={require('../assets/images/elliptic-black.svg')} className="mr-3" alt="" />
+                                                    button fill
+                                                </div>
+                                            </div>
+                                            <div className="justify-left pt-3">
+                                                <div className="justify-left border-elliptic pr-2">
+                                                    <img src={require('../assets/images/elliptic-black.svg')} className="mr-3" alt="" />
+                                                    grid lines
+                                                </div>
+                                            </div>
+                                            <div className="justify-left pt-3">
+                                                <div className="justify-left pl-3">
+                                                    <img src={require('../assets/images/scroll-bar.svg')} className="mr-3" alt="" />
+                                                    scroll bar
+                                                </div>
+                                            </div>
+                                            <div className="justify-left pt-3">
+                                                <div className="justify-left pl-3">
+                                                    <img src={require('../assets/images/scroll-background.svg')} className="mr-3" alt="" />
+                                                    scroll bar background
+                                                </div>
+                                            </div>
+                                            <div className="justify-left pt-3 pb-3 mb-2">
+                                                <div className="">
+                                                    <input
+                                                        type="file"
+                                                        accept="image/*"
+                                                        className="border-elliptic custom-file-input input-width"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        :
+                                        null
+                                }
                                 <div className="hr-black">
                                     <div className="justify-left border-elliptic mt-5 pt-1 pb-1 ml-6 mr-10 txt-18">
                                         <span className="gray-color">HEX </span>
@@ -238,7 +303,7 @@ class Settings extends Component {
                                             " " + this.state.color_hex.toUpperCase()
                                         }
                                     </div>
-                                    <div className="justify-center flex-grid grid2 pr-10 pl-6">
+                                    <div className="justify-center flex-grid grid2 hex pr-10 pl-6">
                                         <div className="justify-left border-elliptic mt-6 pt-1 txt-18">
                                             <span className="gray-color">C %</span>
                                             {
