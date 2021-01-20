@@ -55,13 +55,13 @@ class Home extends Component {
             speed: 500,
             slidesToShow: 2,
             slidesToScroll: 1,
-            autoplay: true,
+            //autoplay: true,
             autoplayTimeout: 600,
             pauseOnHover: true,
             variableHeight: true,
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: 748,
                     settings: {
                         fade: true,
                         slidesToShow: 1,
@@ -77,7 +77,7 @@ class Home extends Component {
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            //autoplay: true,
             autoplayTimeout: 1000,
             pauseOnHover: true,
             variableHeight: true,
@@ -346,7 +346,7 @@ class Home extends Component {
                     </div>
                 </div>
 
-                {/*  Who loves us  */}
+                {/*Who loves us  */}
                 <div className="who-body">
                     <div className="flex-left show1200">
                         <img src={require('../assets/images/screen-image8.png')} className="" alt='Virtual Venue'/>
@@ -573,7 +573,7 @@ class Home extends Component {
                     </div>
                 </div>
 
-                {/*  Click to expand examples  */}
+                {/*Click to expand examples*/}
                 <div className="click-example-body sign-contact-hidden">
                     <div className="pb-8 txt-24 txt-left gray-color txt-weight-500">Click to expand examples</div>
                     <div className="flex-grid grid3">
@@ -654,7 +654,7 @@ class Home extends Component {
                 <div className="justify-center mouse-cursor pt-40">
                     <div className="btn-footer txt-80 txt-semi-bold justify-center">SIGN UP</div>
                 </div>
-                {/*  Footer  */}
+                {/*Footer  */}
                 <div className="pt-20 bg-footer">
                     <div className="footer-p">
                         <div className="pt-20 txt-60">

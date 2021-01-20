@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6dfc4be5-ef3c-4857-af47-20e3a0eb92a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.d4e8ce6748af55838c1f50a8e376b2ad.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/tailwind.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/settings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwindcss-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwindcss-config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +142,7 @@
       <workItem from="1597346597462" duration="59000" />
       <workItem from="1610845498858" duration="9212000" />
       <workItem from="1610939566540" duration="133165000" />
-      <workItem from="1611149167656" duration="1870000" />
+      <workItem from="1611149167656" duration="6746000" />
     </task>
     <servers />
   </component>

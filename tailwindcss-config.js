@@ -818,6 +818,9 @@ module.exports = {
             '.phone-icon-show': {
               display: 'block',
             },
+            '.phone-icon-hide': {
+              display: 'none',
+            },
             '.click-example-body': {
               padding: '90px 30px !important',
             },
@@ -836,9 +839,6 @@ module.exports = {
 
         {
           '@media (max-width: 768px)': {
-            '.phone-icon-hide': {
-              display: 'none',
-            },
             '.sign-contact-show > div > div.slick-list > div.slick-track': {
               backgroundColor: 'var(--grid2-color) !important',
             },
@@ -849,7 +849,7 @@ module.exports = {
               display: 'none !important',
             },
             '.individual, .community, .enterprise': {
-              padding: '70px 60px 150px !important',
+              padding: '70px 30px 150px !important',
               height: 'auto !important',
               color: 'var(--white)',
               backgroundColor: 'var(--grid2-color) !important',
